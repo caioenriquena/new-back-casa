@@ -33,9 +33,9 @@ public class AlunoService {
         alunoRepository.deleteById(id);
     }
 
-    public void atualizarAlunoPorId(Long id, Aluno aluno){
+    public void atualizarAlunoPorId( Aluno aluno){
         //Verificando se o aluno existe no banco de dados
-        Optional<Aluno> alunoDoBancoDeDados = buscarAlunoPorId(id);
+        Optional<Aluno> alunoDoBancoDeDados = buscarAlunoPorId(aluno.getId());
 
         // E se nao tiver? fazemos a verificação com o if
 

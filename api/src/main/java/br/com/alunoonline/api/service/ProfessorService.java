@@ -33,10 +33,10 @@ public class ProfessorService {
         professorRepository.deleteById(id);
     }
 
-    public void atualizarProfessorPorId(Long id, Professor professor) {
+    public void atualizarProfessorPorId( Professor professor) {
 
 
-        Optional<Professor> professorDoBancoDeDados = buscarProfessorPorId(id);
+        Optional<Professor> professorDoBancoDeDados = buscarProfessorPorId(professor.getId());
 
 
         if (professorDoBancoDeDados.isEmpty()) {
